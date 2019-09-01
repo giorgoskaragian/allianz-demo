@@ -1,0 +1,10 @@
+<ul class="list-group list-group-horizontal flex-wrap">
+
+    <li *ngFor="let tag of tags; let i=index" class="list-group-item list-group-item-light m-1">
+      {{tag}}
+      <button type="button" class="badge badge-primary badge-pill" (click)="removeTag(i)">x</button>
+    </li>
+
+</ul>
+
+<input type="text" class="form-control m-2" [(ngModel)]="newTag" (keydown)="onInputKeyDown($event)" placeholder="new tag..." />
